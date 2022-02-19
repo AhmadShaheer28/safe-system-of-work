@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activity.AddConversationActivity">
+
+    <TextView
+        android:id="@+id/safetyConversationTV"
+        style="@style/H1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/yellow"
+        android:gravity="center"
+        android:textColor="@color/red"
+        android:text="@string/safety_conversation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/safetyConversationTV">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/dateTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_45sdp"
+                android:text="@string/date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/dateET"
+                style="@style/P2"
+                android:layout_width="0dp"
+                android:focusable="false"
+                android:padding="@dimen/_10sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:background="@drawable/bg_edittext"
+                app:layout_constraintBottom_toBottomOf="@id/dateTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/dateTV"
+                app:layout_constraintTop_toTopOf="@id/dateTV" />
+
+            <TextView
+                android:id="@+id/timeTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:text="@string/time_24_hours"
+                app:layout_constraintStart_toStartOf="@id/dateTV"
+                app:layout_constraintTop_toBottomOf="@id/dateET" />
+
+            <EditText
+                android:id="@+id/timeET"
+                style="@style/P2"
+                android:layout_width="0dp"
+                android:focusable="false"
+                android:layout_height="@dimen/_35sdp"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:background="@drawable/bg_edittext"
+                app:layout_constraintBottom_toBottomOf="@id/timeTV"
+                app:layout_constraintEnd_toEndOf="@id/dateET"
+                app:layout_constraintStart_toEndOf="@id/timeTV"
+                app:layout_constraintTop_toTopOf="@id/timeTV" />
+
+
+            <TextView
+                android:id="@+id/siteTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:text="@string/site"
+                app:layout_constraintStart_toStartOf="@id/dateTV"
+                app:layout_constraintTop_toBottomOf="@id/timeET" />
+
+            <EditText
+                android:id="@+id/siteET"
+                style="@style/P2"
+                android:layout_width="0dp"
+                android:inputType="textMultiLine"
+                android:layout_height="@dimen/_35sdp"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:background="@drawable/bg_edittext"
+                app:layout_constraintBottom_toBottomOf="@id/siteTV"
+                app:layout_constraintEnd_toEndOf="@id/dateET"
+                app:layout_constraintStart_toEndOf="@id/siteTV"
+                app:layout_constraintTop_toTopOf="@id/siteTV" />
+
+
+            <TextView
+                android:id="@+id/observerNameTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:text="@string/observer_name"
+                app:layout_constraintStart_toStartOf="@id/dateTV"
+                app:layout_constraintTop_toBottomOf="@id/siteET" />
+
+            <EditText
+                android:id="@+id/observerNameET"
+                style="@style/P2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_35sdp"
+                android:padding="@dimen/_10sdp"
+                android:inputType="textMultiLine"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:background="@drawable/bg_edittext"
+                app:layout_constraintBottom_toBottomOf="@id/observerNameTV"
+                app:layout_constraintEnd_toEndOf="@id/dateET"
+                app:layout_constraintStart_toEndOf="@id/observerNameTV"
+                app:layout_constraintTop_toTopOf="@id/observerNameTV" />
+
+
+            <TextView
+                android:id="@+id/observedTV"
+                style="@style/P1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:text="@string/where_observed"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/observerNameET" />
+
+            <LinearLayout
+                android:id="@+id/whereObservedLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/observedTV">
+                <!--                Line 1  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/officeTV"
+                            style="@style/P2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_15sdp"
+                            android:text="@string/office" />
+
+                        <CheckBox
+                            android:id="@+id/officeCB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/yellow" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/warehouseTV"
+                            style="@style/P2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_15sdp"
+                            android:text="@string/warehouse" />
+
+                        <CheckBox
+                            android:id="@+id/warehouseCB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/yellow" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--                Line 2  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/vehicleTV"
+                            style="@style/P2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_15sdp"
+                            android:text="@string/vehicle" />
+
+                        <CheckBox
+                            android:id="@+id/vehicleCB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/yellow" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/rampTV"
+                            style="@style/P2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_15sdp"
+                            android:text="@string/ramp" />
+
+                        <CheckBox
+                            android:id="@+id/rampCB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/yellow" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/yardTV"
+                            style="@style/P2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_15sdp"
+                            android:text="@string/yard" />
+
+                        <CheckBox
+                            android:id="@+id/yardCB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/yellow" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--                Line 3  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/contractorTV"
+                            style="@style/P2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_15sdp"
+                            android:text="@string/contractors" />
+
+                        <CheckBox
+                            android:id="@+id/contractorCB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/yellow" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/workshopTV"
+                            style="@style/P2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_15sdp"
+                            android:text="@string/workshop" />
+
+                        <CheckBox
+                            android:id="@+id/workshopCB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/yellow" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/nameObservedTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:text="@string/person_name_observed"
+                app:layout_constraintStart_toStartOf="@id/timeTV"
+                app:layout_constraintTop_toBottomOf="@id/whereObservedLayout" />
+
+            <EditText
+                android:id="@+id/nameObservedET"
+                style="@style/P2"
+                android:layout_width="0dp"
+                android:inputType="textMultiLine"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/bg_edittext"
+                android:padding="@dimen/_10sdp"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/nameObservedTV"
+                app:layout_constraintEnd_toEndOf="@id/dateET"
+                app:layout_constraintStart_toEndOf="@id/nameObservedTV"
+                app:layout_constraintTop_toTopOf="@id/nameObservedTV" />
+
+            <TextView
+                android:id="@+id/taskObservedTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:text="@string/task_observed"
+                app:layout_constraintStart_toStartOf="@id/timeTV"
+                app:layout_constraintTop_toBottomOf="@id/nameObservedET" />
+
+            <EditText
+                android:id="@+id/taskObservedET"
+                style="@style/P2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/bg_edittext"
+                android:padding="@dimen/_10sdp"
+                android:inputType="textMultiLine"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/taskObservedTV"
+                app:layout_constraintEnd_toEndOf="@id/dateET"
+                app:layout_constraintStart_toEndOf="@id/taskObservedTV"
+                app:layout_constraintTop_toTopOf="@id/taskObservedTV" />
+
+
+            <TextView
+                android:id="@+id/behaviourObservedTV"
+                style="@style/P1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:text="@string/behaviour_code_observed"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/taskObservedET" />
+
+            <TextView
+                android:id="@+id/safeTV"
+                style="@style/P3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:text="@string/safe"
+                app:layout_constraintStart_toEndOf="@id/manualSpinner"
+                app:layout_constraintTop_toBottomOf="@id/behaviourObservedTV" />
+
+            <TextView
+                android:id="@+id/unSafeTV"
+                style="@style/P3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:text="@string/unsafe"
+                app:layout_constraintStart_toEndOf="@id/safeTV"
+                app:layout_constraintTop_toBottomOf="@id/behaviourObservedTV" />
+
+            <TextView
+                android:id="@+id/manualTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:text="@string/manual_handling"
+                app:layout_constraintStart_toStartOf="@id/timeTV"
+                app:layout_constraintTop_toBottomOf="@id/behaviourObservedTV" />
+
+            <Spinner
+                android:id="@+id/manualSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/manualHandle"
+                android:theme="@style/Platform.MaterialComponents.Light"
+                app:layout_constraintBottom_toBottomOf="@id/manualTV"
+                app:layout_constraintStart_toEndOf="@id/guidelineV"
+                app:layout_constraintTop_toTopOf="@id/manualTV" />
+
+            <TextView
+                android:id="@+id/manualSafeTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 - 4"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="@id/safeTV"
+                app:layout_constraintEnd_toEndOf="@id/safeTV"
+                app:layout_constraintTop_toTopOf="@id/manualSpinner" />
+
+            <TextView
+                android:id="@+id/manualUnSafeTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 - 9"
+                app:layout_constraintStart_toStartOf="@id/unSafeTV"
+                app:layout_constraintEnd_toEndOf="@id/unSafeTV"
+                app:layout_constraintTop_toTopOf="@id/manualSafeTV" />
+
+            <TextView
+                android:id="@+id/ppeTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/ppe"
+                app:layout_constraintStart_toStartOf="@id/timeTV"
+                app:layout_constraintTop_toBottomOf="@id/manualTV" />
+
+            <Spinner
+                android:id="@+id/ppeSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/PPE"
+                android:theme="@style/Platform.MaterialComponents.Light"
+                app:layout_constraintBottom_toBottomOf="@id/ppeTV"
+                app:layout_constraintStart_toStartOf="@id/manualSpinner"
+                app:layout_constraintTop_toTopOf="@id/ppeTV" />
+
+            <TextView
+                android:id="@+id/ppeSafeTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 - 2"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="@id/safeTV"
+                app:layout_constraintEnd_toEndOf="@id/safeTV"
+                app:layout_constraintTop_toTopOf="@id/ppeSpinner" />
+
+            <TextView
+                android:id="@+id/ppeUnSafeTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3 - 6"
+                app:layout_constraintStart_toStartOf="@id/unSafeTV"
+                app:layout_constraintEnd_toEndOf="@id/unSafeTV"
+                app:layout_constraintTop_toTopOf="@id/ppeSafeTV" />
+
+            <TextView
+                android:id="@+id/mheTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/mhe"
+                app:layout_constraintStart_toStartOf="@id/timeTV"
+                app:layout_constraintTop_toBottomOf="@id/ppeTV" />
+
+            <Spinner
+                android:id="@+id/mheSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/MHE"
+                android:theme="@style/Platform.MaterialComponents.Light"
+                app:layout_constraintBottom_toBottomOf="@id/mheTV"
+                app:layout_constraintStart_toStartOf="@id/manualSpinner"
+                app:layout_constraintTop_toTopOf="@id/mheTV" />
+
+            <TextView
+                android:id="@+id/mheSafeTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 - 9"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="@id/safeTV"
+                app:layout_constraintEnd_toEndOf="@id/safeTV"
+                app:layout_constraintTop_toTopOf="@id/mheSpinner" />
+
+            <TextView
+                android:id="@+id/mheUnSafeTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 - 18"
+                app:layout_constraintStart_toStartOf="@id/unSafeTV"
+                app:layout_constraintEnd_toEndOf="@id/unSafeTV"
+                app:layout_constraintTop_toTopOf="@id/mheSafeTV" />
+
+            <TextView
+                android:id="@+id/workplaceTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/workplace"
+                app:layout_constraintStart_toStartOf="@id/timeTV"
+                app:layout_constraintTop_toBottomOf="@id/mheTV" />
+
+            <Spinner
+                android:id="@+id/workplaceSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/workplace"
+                android:theme="@style/Platform.MaterialComponents.Light"
+                app:layout_constraintBottom_toBottomOf="@id/workplaceTV"
+                app:layout_constraintStart_toStartOf="@id/manualSpinner"
+                app:layout_constraintTop_toTopOf="@id/workplaceTV" />
+
+            <TextView
+                android:id="@+id/workplaceSafeTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 - 5"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="@id/safeTV"
+                app:layout_constraintEnd_toEndOf="@id/safeTV"
+                app:layout_constraintTop_toTopOf="@id/workplaceSpinner" />
+
+            <TextView
+                android:id="@+id/workplaceUnSafeTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 - 11"
+                app:layout_constraintStart_toStartOf="@id/unSafeTV"
+                app:layout_constraintEnd_toEndOf="@id/unSafeTV"
+                app:layout_constraintTop_toTopOf="@id/workplaceSafeTV" />
+
+            <TextView
+                android:id="@+id/workEquipTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/work_equipment"
+                app:layout_constraintStart_toStartOf="@id/timeTV"
+                app:layout_constraintTop_toBottomOf="@id/workplaceTV" />
+
+            <Spinner
+                android:id="@+id/workEquipSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/workEquipment"
+                android:theme="@style/Platform.MaterialComponents.Light"
+                app:layout_constraintBottom_toBottomOf="@id/workEquipTV"
+                app:layout_constraintStart_toStartOf="@id/manualSpinner"
+                app:layout_constraintTop_toTopOf="@id/workEquipTV" />
+
+            <TextView
+                android:id="@+id/workEquipSafeTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 - 4"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="@id/safeTV"
+                app:layout_constraintEnd_toEndOf="@id/safeTV"
+                app:layout_constraintTop_toTopOf="@id/workEquipSpinner" />
+
+            <TextView
+                android:id="@+id/workEquipUnSafeTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 - 8"
+                app:layout_constraintStart_toStartOf="@id/unSafeTV"
+                app:layout_constraintEnd_toEndOf="@id/unSafeTV"
+                app:layout_constraintTop_toTopOf="@id/workEquipSafeTV" />
+
+            <TextView
+                android:id="@+id/roadTransTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/road_transport"
+                app:layout_constraintStart_toStartOf="@id/timeTV"
+                app:layout_constraintTop_toBottomOf="@id/workEquipTV" />
+
+            <Spinner
+                android:id="@+id/roadTransSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/roadTransport"
+                android:theme="@style/Platform.MaterialComponents.Light"
+                app:layout_constraintBottom_toBottomOf="@id/roadTransTV"
+                app:layout_constraintStart_toStartOf="@id/manualSpinner"
+                app:layout_constraintTop_toTopOf="@id/roadTransTV" />
+
+            <TextView
+                android:id="@+id/roadTransSafeTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 - 4"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="@id/safeTV"
+                app:layout_constraintEnd_toEndOf="@id/safeTV"
+                app:layout_constraintTop_toTopOf="@id/roadTransSpinner" />
+
+            <TextView
+                android:id="@+id/roadTransUnSafeTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 - 8"
+                app:layout_constraintStart_toStartOf="@id/unSafeTV"
+                app:layout_constraintEnd_toEndOf="@id/unSafeTV"
+                app:layout_constraintTop_toTopOf="@id/roadTransSafeTV" />
+
+            <TextView
+                android:id="@+id/proceduresTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/procedure_ssow"
+                app:layout_constraintStart_toStartOf="@id/timeTV"
+                app:layout_constraintTop_toBottomOf="@id/roadTransTV" />
+
+            <Spinner
+                android:id="@+id/procedureSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/procedures"
+                android:theme="@style/Platform.MaterialComponents.Light"
+                app:layout_constraintBottom_toBottomOf="@id/proceduresTV"
+                app:layout_constraintStart_toStartOf="@id/manualSpinner"
+                app:layout_constraintTop_toTopOf="@id/proceduresTV" />
+
+            <TextView
+                android:id="@+id/procedureSafeTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 - 4"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="@id/safeTV"
+                app:layout_constraintEnd_toEndOf="@id/safeTV"
+                app:layout_constraintTop_toTopOf="@id/procedureSpinner" />
+
+            <TextView
+                android:id="@+id/procedureUnSafeTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 - 8"
+                app:layout_constraintStart_toStartOf="@id/unSafeTV"
+                app:layout_constraintEnd_toEndOf="@id/unSafeTV"
+                app:layout_constraintTop_toTopOf="@id/procedureSafeTV" />
+
+
+            <TextView
+                android:id="@+id/behaviourObserved2TV"
+                style="@style/P1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:text="@string/behaviour_observed"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/procedureUnSafeTV" />
+
+            <LinearLayout
+                android:id="@+id/safeUnsafeBehaviourLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/behaviourObserved2TV">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/safeBehaviourTV"
+                        style="@style/P2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_15sdp"
+                        android:text="@string/safe" />
+
+                    <CheckBox
+                        android:id="@+id/safeCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/yellow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/unSafeBehaviourTV"
+                        style="@style/P2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_15sdp"
+                        android:text="@string/unsafe" />
+
+                    <CheckBox
+                        android:id="@+id/unsafeCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/yellow" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/causeOfUnsafeTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:text="@string/cause_of_unsafe_behaviour"
+                app:layout_constraintStart_toStartOf="@id/timeTV"
+                app:layout_constraintTop_toBottomOf="@id/safeUnsafeBehaviourLayout" />
+
+            <EditText
+                android:id="@+id/causeOfUnsafeET"
+                style="@style/P2"
+                android:gravity="top"
+                android:layout_width="0dp"
+                android:padding="@dimen/_10sdp"
+                android:layout_height="@dimen/_65sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:overScrollMode="always"
+                android:inputType="textMultiLine"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:background="@drawable/bg_edittext"
+                app:layout_constraintBottom_toBottomOf="@id/causeOfUnsafeTV"
+                app:layout_constraintEnd_toEndOf="@id/dateET"
+                app:layout_constraintStart_toEndOf="@id/taskObservedTV"
+                app:layout_constraintTop_toTopOf="@id/causeOfUnsafeTV" />
+
+
+            <TextView
+                android:id="@+id/commentTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:text="@string/comments"
+                app:layout_constraintStart_toStartOf="@id/timeTV"
+                app:layout_constraintTop_toBottomOf="@id/causeOfUnsafeET" />
+
+            <EditText
+                android:id="@+id/commentET"
+                style="@style/P2"
+                android:gravity="top"
+                android:layout_width="0dp"
+                android:inputType="textMultiLine"
+                android:padding="@dimen/_10sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:background="@drawable/bg_edittext"
+                app:layout_constraintBottom_toBottomOf="@id/commentTV"
+                app:layout_constraintEnd_toEndOf="@id/dateET"
+                app:layout_constraintStart_toEndOf="@id/taskObservedTV"
+                app:layout_constraintTop_toTopOf="@id/commentTV" />
+
+
+            <TextView
+                android:id="@+id/actionCodeTV"
+                style="@style/P2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/action_codes"
+                app:layout_constraintStart_toStartOf="@id/timeTV"
+                app:layout_constraintTop_toBottomOf="@id/commentET" />
+
+            <Spinner
+                android:id="@+id/actionCodeSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/actionCode"
+                android:theme="@style/Platform.MaterialComponents.Light"
+                app:layout_constraintBottom_toBottomOf="@id/actionCodeTV"
+                app:layout_constraintStart_toStartOf="@id/manualSpinner"
+                app:layout_constraintTop_toTopOf="@id/actionCodeTV" />
+
+            <Button
+                android:id="@+id/submitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_margin="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/actionCodeSpinner"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

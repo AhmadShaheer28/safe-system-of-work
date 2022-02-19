@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Safe System Of Work</string>
+    <string name="logo">Logo</string>
+    <string name="date">Date</string>
+    <string name="site">Site</string>
+    <string name="ramp">Ramp</string>
+    <string name="yard">Yard</string>
+    <string name="safe">Safe</string>
+    <string name="unsafe">Unsafe</string>
+    <string name="comments">Comments</string>
+    <string name="detail">Detail</string>
+
+
+    <string name="workshop">Workshop</string>
+    <string name="contractors">Contractors</string>
+    <string name="vehicle">Vehicle</string>
+    <string name="warehouse">Warehouse</string>
+    <string name="office">Office</string>
+    <string name="workplace">Workplace</string>
+    <string name="ppe">PPE</string>
+    <string name="mhe">MHE</string>
+    <string name="procedure_ssow">Procedures/SSOW</string>
+    <string name="road_transport">Road Transport</string>
+    <string name="work_equipment">Work Equipment</string>
+    <string name="manual_handling">Manual Handling</string>
+    <string name="where_observed">Where Observed:</string>
+    <string name="behaviour_observed">Behaviour observed:</string>
+    <string name="task_observed">Task\nObserved</string>
+    <string name="action_codes">Action Codes</string>
+    <string name="person_name_observed">Person\'s name observed</string>
+    <string name="observer_name">Observer Name</string>
+    <string name="time_24_hours">Time (24 hour format)</string>
+    <string name="safety_conversation">Safety Conversation</string>
+
+    <string name="cause_of_unsafe_behaviour">Cause of\nUnsafe\nBehaviour</string>
+
+    <string name="behaviour_code_observed">Behaviour Codes Observed (circle number observed):</string>
+    <string name="no_items_found">No Safety Conversations</string>
+</resources>
